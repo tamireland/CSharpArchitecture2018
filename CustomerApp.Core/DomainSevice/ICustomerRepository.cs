@@ -1,25 +1,21 @@
-﻿using CustomerApp.Core.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using CustomerApp.Core.Entity;
 
-namespace CustomerApp.Core.DomainSevice
+namespace CustomerApp.Core.DomainService
 {
     public interface ICustomerRepository
     {
-        // -- CustomerRepository --
-        // Create Data
-        // No Id when enter, but Id when exist
+        //CustomerRepository Interface
+        //Create Data
+        //No Id when enter, but Id when exits
         Customer Create(Customer customer);
-
-        // Read Data
-        Customer Read(int id);
-        List<Customer> ReadAll();
-
-        // Update Data
+        //Read Data
+        Customer ReadyById(int id);
+        IEnumerable<Customer> ReadAll();
+        //Update Data
         Customer Update(Customer customerUpdate);
-
-        // Delete Data
+        //Delete Data
         Customer Delete(int id);
     }
 }
